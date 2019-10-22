@@ -22,7 +22,7 @@ public class FormPanel extends JPanel {
     public FormPanel() {
 
         Dimension dim = getPreferredSize();
-        dim.width = 280;
+        dim.width = 300;
         setPreferredSize(dim);
 
         subTitle = new JTextArea();
@@ -66,12 +66,12 @@ public class FormPanel extends JPanel {
             }
         });
 
-        n1.setPreferredSize(new Dimension(25,25));
-        n2.setPreferredSize(new Dimension(25,25));
-        n3.setPreferredSize(new Dimension(25,25));
-        n4.setPreferredSize(new Dimension(25,25));
-        n5.setPreferredSize(new Dimension(25,25));
-        betAmount.setPreferredSize(new Dimension(50,20));
+        n1.setPreferredSize(new Dimension(20, 20));
+        n2.setPreferredSize(new Dimension(20, 20));
+        n3.setPreferredSize(new Dimension(20, 20));
+        n4.setPreferredSize(new Dimension(20, 20));
+        n5.setPreferredSize(new Dimension(20, 20));
+        //betAmount.setPreferredSize(new Dimension(20, 20));
 
         Border innerBorder = BorderFactory.createTitledBorder("Place your bets");
         Border outerBorder = BorderFactory.createEmptyBorder(5, 5, 5, 5);
@@ -93,7 +93,6 @@ public class FormPanel extends JPanel {
         gc.weighty = 0.1;  //the size of the cell opposed to others cells
 
         gc.gridx = 0; //position of the cell
-        gc.fill = GridBagConstraints.NONE; // Decides whether you want to fully fill your cells or not
         gc.anchor = GridBagConstraints.PAGE_START; // places the subtitle on top of the Panel
         gc.insets = new Insets(15, 0, 0, 0); //places a margin of 15pix on top
         add(subTitle, gc);
@@ -102,21 +101,26 @@ public class FormPanel extends JPanel {
         ///////////// Next row /////////////////////////
         gc.gridy++;
 
-        gc.weightx = 1; //the size of the cell opposed to others cells
-        gc.weighty = 0.25;
-
-        gc.anchor = GridBagConstraints.LINE_START;
+        gc.fill = GridBagConstraints.HORIZONTAL;
         gc.gridx = 0;
+        gc.weightx = 0.25;
         add(n1, gc);
 
+        gc.fill = GridBagConstraints.HORIZONTAL;
         gc.gridx = 1;
+        gc.weightx = 0.25;
         add(n2, gc);
 
+        gc.fill = GridBagConstraints.HORIZONTAL;
         gc.gridx = 2;
+        gc.weightx = 0.25;
         add(n3, gc);
 
+        gc.fill = GridBagConstraints.HORIZONTAL;
         gc.gridx = 3;
+        gc.weightx = 0.25;
         add(n4, gc);
+
 
         ///////////// Next row /////////////////////////
 
@@ -126,11 +130,11 @@ public class FormPanel extends JPanel {
         gc.weighty = 0.1;
 
         gc.gridx = 0;
-        gc.anchor = GridBagConstraints.LINE_END;
+        gc.anchor = GridBagConstraints.FIRST_LINE_END;
         add(superBetLabel, gc);
 
         gc.gridx = 1;
-        gc.anchor = GridBagConstraints.LINE_START;
+        gc.anchor = GridBagConstraints.FIRST_LINE_START;
         add(superBet, gc);
 
 
@@ -161,11 +165,12 @@ public class FormPanel extends JPanel {
         gc.anchor = GridBagConstraints.LINE_START;
         add(betAmount, gc);
 
+
         ///////////// Last row /////////////////////////
         gc.gridy++;
 
         gc.weightx = 1; //the size of the cell opposed to others cells
-        gc.weighty = 1;
+        gc.weighty = 0.5;
 
         gc.gridx = 0;
         gc.insets = new Insets(0, 0, 0, 5);

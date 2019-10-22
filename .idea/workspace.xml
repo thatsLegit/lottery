@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d75f6aaa-3c6a-4892-825d-4e8fef684aa6" name="Default Changelist" comment="" />
+    <list default="true" id="18aa9f8d-8668-41ec-b489-f3335f13ff87" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/FormPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/FormPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/META-INF/lottery.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormPanel.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1SUj1mR9Yb6oScDGWkWnoOdouj1" />
+  <component name="ProjectId" id="1SYhIUlSCyjy9zntp6AWjyHqLJE" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -57,20 +60,30 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d75f6aaa-3c6a-4892-825d-4e8fef684aa6" name="Default Changelist" comment="" />
-      <created>1571624855133</created>
+      <changelist id="18aa9f8d-8668-41ec-b489-f3335f13ff87" name="Default Changelist" comment="" />
+      <created>1571746356525</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1571624855133</updated>
-      <workItem from="1571624856398" duration="2201000" />
-      <workItem from="1571653628575" duration="3461000" />
-      <workItem from="1571672504038" duration="9525000" />
-      <workItem from="1571686962431" duration="165000" />
-      <workItem from="1571732495535" duration="455000" />
+      <updated>1571746356525</updated>
+      <workItem from="1571746360050" duration="153000" />
+      <workItem from="1571752459416" duration="3988000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
