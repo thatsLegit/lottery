@@ -21,10 +21,12 @@ public class FormPanel extends JPanel {
 
     public FormPanel() {
 
+        //sizing the Formpanel
         Dimension dim = getPreferredSize();
-        dim.width = 300;
+        dim.width = 270;
         setPreferredSize(dim);
 
+        //components
         subTitle = new JTextArea();
         n1 = new JTextField();
         n2 = new JTextField();
@@ -38,12 +40,7 @@ public class FormPanel extends JPanel {
         addNumbers = new JButton("Add bets");
         drawNumbers = new JButton("Draw numbers");
 
-        subTitle.setEditable(false);
-
-        Font font = new Font("Helvetica", Font.BOLD, 13);
-        subTitle.setFont(font);
-        subTitle.setBackground(new Color(80, 174, 205));
-
+        //adding components
         subTitle.append("1. Choose numbers :");
         add(subTitle);
         add(n1);
@@ -58,6 +55,7 @@ public class FormPanel extends JPanel {
         add(addNumbers);
         add(drawNumbers);
 
+        //putting a "condition" to n5 (super bet)
         n5.setEnabled(false);
         superBet.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -66,17 +64,26 @@ public class FormPanel extends JPanel {
             }
         });
 
+        //subtitle "choose numbers"
+        subTitle.setEditable(false);
+        Font font = new Font("Helvetica", Font.BOLD, 13);
+        subTitle.setFont(font);
+        subTitle.setBackground(new Color(80, 174, 205));
+
+        //sizing tiny components
         n1.setPreferredSize(new Dimension(20, 20));
         n2.setPreferredSize(new Dimension(20, 20));
         n3.setPreferredSize(new Dimension(20, 20));
         n4.setPreferredSize(new Dimension(20, 20));
         n5.setPreferredSize(new Dimension(20, 20));
-        //betAmount.setPreferredSize(new Dimension(20, 20));
+        betAmount.setPreferredSize(new Dimension(40, 20));
 
+        //placing border
         Border innerBorder = BorderFactory.createTitledBorder("Place your bets");
         Border outerBorder = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         setBorder(BorderFactory.createCompoundBorder(outerBorder, innerBorder));
 
+        //gridBagLayout
         layoutComponents();
     }
 
@@ -90,35 +97,27 @@ public class FormPanel extends JPanel {
         gc.gridy = 0; // row position
 
         gc.weightx = 1;  //weights
-        gc.weighty = 0.1;  //the size of the cell opposed to others cells
+        gc.weighty = 0.05;  //the size of the cell opposed to others cells
 
         gc.gridx = 0; //position of the cell
         gc.anchor = GridBagConstraints.PAGE_START; // places the subtitle on top of the Panel
-        gc.insets = new Insets(15, 0, 0, 0); //places a margin of 15pix on top
+        gc.insets = new Insets(20, 0, 0, 0); //places a margin of 15pix on top
         add(subTitle, gc);
 
 
         ///////////// Next row /////////////////////////
         gc.gridy++;
 
-        gc.fill = GridBagConstraints.HORIZONTAL;
+        gc.weighty = 0.35;
         gc.gridx = 0;
-        gc.weightx = 0.25;
+        gc.anchor = GridBagConstraints.LINE_START;  //n1/n2/n3 in the same cell, n4 in 2nd cell
         add(n1, gc);
-
-        gc.fill = GridBagConstraints.HORIZONTAL;
-        gc.gridx = 1;
-        gc.weightx = 0.25;
+        gc.anchor = GridBagConstraints.CENTER;
         add(n2, gc);
-
-        gc.fill = GridBagConstraints.HORIZONTAL;
-        gc.gridx = 2;
-        gc.weightx = 0.25;
+        gc.anchor = GridBagConstraints.LINE_END;
         add(n3, gc);
-
-        gc.fill = GridBagConstraints.HORIZONTAL;
-        gc.gridx = 3;
-        gc.weightx = 0.25;
+        gc.gridx = 1;
+        gc.anchor = GridBagConstraints.CENTER;
         add(n4, gc);
 
 
@@ -127,42 +126,33 @@ public class FormPanel extends JPanel {
         gc.gridy++;
 
         gc.weightx = 1; //the size of the cell opposed to others cells
-        gc.weighty = 0.1;
+        gc.weighty = 0.05;
 
         gc.gridx = 0;
-        gc.anchor = GridBagConstraints.FIRST_LINE_END;
+        gc.anchor = GridBagConstraints.LINE_START;
         add(superBetLabel, gc);
-
-        gc.gridx = 1;
-        gc.anchor = GridBagConstraints.FIRST_LINE_START;
+        gc.anchor = GridBagConstraints.LINE_END;
         add(superBet, gc);
 
 
         ///////////// Next row /////////////////////////
         gc.gridy++;
 
-        gc.weightx = 1; //the size of the cell opposed to others cells
-        gc.weighty = 0.1;
-
-        gc.fill = GridBagConstraints.NONE; // Decides whether you want to fully fill your cells or not
         gc.gridx = 0;
+        gc.weighty = 0.05;
+        gc.anchor = GridBagConstraints.CENTER; // Decides whether you want to fully fill your cells or not
         add(n5, gc);
 
 
         ///////////// Next row /////////////////////////
         gc.gridy++;
 
-        gc.weightx = 1; //the size of the cell opposed to others cells
         gc.weighty = 1;
 
         gc.gridx = 0;
-        gc.insets = new Insets(0, 0, 0, 5);
-        gc.anchor = GridBagConstraints.LINE_END;
-        add(betAmountLabel, gc);
-
-        gc.gridx = 1;
-        gc.insets = new Insets(0, 0, 0, 0);
         gc.anchor = GridBagConstraints.LINE_START;
+        add(betAmountLabel, gc);
+        gc.anchor = GridBagConstraints.CENTER;
         add(betAmount, gc);
 
 
@@ -173,14 +163,11 @@ public class FormPanel extends JPanel {
         gc.weighty = 0.5;
 
         gc.gridx = 0;
-        gc.insets = new Insets(0, 0, 0, 5);
-        gc.anchor = GridBagConstraints.LINE_END;
+        gc.anchor = GridBagConstraints.LINE_START;
         add(addNumbers, gc);
 
         gc.gridx = 1;
-        gc.insets = new Insets(0, 0, 0, 0);
         gc.anchor = GridBagConstraints.LINE_START;
         add(drawNumbers, gc);
-
     }
 }

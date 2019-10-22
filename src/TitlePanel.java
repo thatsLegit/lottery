@@ -6,6 +6,7 @@ public class TitlePanel extends JPanel {
     private JTextArea title;
 
     public TitlePanel() {
+
         title = new JTextArea();
         title.setEditable(false);
 

@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18aa9f8d-8668-41ec-b489-f3335f13ff87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/seven-reasons-not-to-play-the-lottery-lwjmikju.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/FormPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/FormPanel$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lottery/FormPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/FormPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/META-INF/lottery.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/TablePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/TablePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/TitlePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/TitlePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TablePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TitlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TitlePanel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +20,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SYhIUlSCyjy9zntp6AWjyHqLJE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -41,9 +57,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="lottery" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
       <module name="lottery" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -52,6 +75,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -67,6 +91,7 @@
       <updated>1571746356525</updated>
       <workItem from="1571746360050" duration="153000" />
       <workItem from="1571752459416" duration="3988000" />
+      <workItem from="1571771359520" duration="8123000" />
     </task>
     <servers />
   </component>
@@ -85,5 +110,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
