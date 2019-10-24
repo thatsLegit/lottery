@@ -2,17 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18aa9f8d-8668-41ec-b489-f3335f13ff87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/seven-reasons-not-to-play-the-lottery-lwjmikju.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/Bet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/FormEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/FormListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/TablePanelModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/FormPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/FormPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/FormPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/FormPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/TablePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/TablePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/TitlePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/TitlePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TablePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TitlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TitlePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/App$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/FormPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/FormPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/MainFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/TablePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/TitlePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/seven-reasons-not-to-play-the-lottery-lwjmikju.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FormPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TablePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TitlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TitlePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seven-reasons-not-to-play-the-lottery-lwjmikju.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -36,6 +48,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -59,7 +72,7 @@
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App" />
+      <option name="MAIN_CLASS_NAME" value="gui.App" />
       <module name="lottery" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -92,6 +105,8 @@
       <workItem from="1571746360050" duration="153000" />
       <workItem from="1571752459416" duration="3988000" />
       <workItem from="1571771359520" duration="8123000" />
+      <workItem from="1571869433496" duration="6302000" />
+      <workItem from="1571929583787" duration="15988000" />
     </task>
     <servers />
   </component>

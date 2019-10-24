@@ -1,3 +1,5 @@
+package gui;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -18,12 +20,13 @@ public class FormPanel extends JPanel {
     private JLabel betAmountLabel;
     private JButton addNumbers;
     private JButton drawNumbers;
+    private FormListener formListenerAddButton;
 
     public FormPanel() {
 
         //sizing the Formpanel
         Dimension dim = getPreferredSize();
-        dim.width = 270;
+        dim.width = 300;
         setPreferredSize(dim);
 
         //components
@@ -78,6 +81,51 @@ public class FormPanel extends JPanel {
         n5.setPreferredSize(new Dimension(20, 20));
         betAmount.setPreferredSize(new Dimension(40, 20));
 
+        addNumbers.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //here I can only extract a text value but it will transformed into an int in the gui.FormEvent class
+                //input the numbers and check for errors
+                String number1 = n1.getText();
+                String number2 = n2.getText();
+                String number3 = n3.getText();
+                String number4 = n4.getText();
+                String number5 = n5.getText();
+                Boolean isBet = superBet.isSelected();
+
+                if (isBet && number5.equals("")) {
+                    JOptionPane.showMessageDialog(null, "A number should be entered", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    throw new IllegalArgumentException("A number 5 should be entered");
+                }
+
+                if (isBet) {
+                    checkForErrors1(number1, number2, number3, number4);
+                    checkForErrors2(number5);
+                } else {
+                    checkForErrors1(number1, number2, number3, number4);
+                }
+
+                String betAmountValue = betAmount.getText();
+
+                //storing the input
+                FormEvent ev = new FormEvent(this, number1, number2, number3, number4, number5, isBet, betAmountValue);
+
+                //retrieving data
+                if (formListenerAddButton != null) {
+                    formListenerAddButton.formEventOccured(ev);
+                }
+
+                //clearing all the fields after having added the data into the table
+                n1.setText("");
+                n2.setText("");
+                n3.setText("");
+                n4.setText("");
+                n5.setText("");
+                superBet.setSelected(false);
+                betAmount.setText("");
+            }
+        });
+
         //placing border
         Border innerBorder = BorderFactory.createTitledBorder("Place your bets");
         Border outerBorder = BorderFactory.createEmptyBorder(5, 5, 5, 5);
@@ -96,7 +144,6 @@ public class FormPanel extends JPanel {
         ///////////// First row /////////////////////////
         gc.gridy = 0; // row position
 
-        gc.weightx = 1;  //weights
         gc.weighty = 0.05;  //the size of the cell opposed to others cells
 
         gc.gridx = 0; //position of the cell
@@ -125,7 +172,6 @@ public class FormPanel extends JPanel {
 
         gc.gridy++;
 
-        gc.weightx = 1; //the size of the cell opposed to others cells
         gc.weighty = 0.05;
 
         gc.gridx = 0;
@@ -159,15 +205,35 @@ public class FormPanel extends JPanel {
         ///////////// Last row /////////////////////////
         gc.gridy++;
 
-        gc.weightx = 1; //the size of the cell opposed to others cells
         gc.weighty = 0.5;
 
         gc.gridx = 0;
         gc.anchor = GridBagConstraints.LINE_START;
         add(addNumbers, gc);
-
         gc.gridx = 1;
         gc.anchor = GridBagConstraints.LINE_START;
         add(drawNumbers, gc);
+    }
+
+    public void setFormListenerAddButton(FormListener listener) {
+        this.formListenerAddButton = listener;
+    }
+
+    public void checkForErrors1(String n1, String n2, String n3, String n4) {
+        int no1 = Integer.parseInt(n1);
+        int no2 = Integer.parseInt(n2);
+        int no3 = Integer.parseInt(n3);
+        int no4 = Integer.parseInt(n4);
+
+        for (int i = 1; i < 5; i++) {
+            if (no1 < 1 || no1 > 20) {
+                JOptionPane.showMessageDialog(null, "1st number should in between 1 and 20", "ERROR", JOptionPane.ERROR_MESSAGE);
+                throw new IllegalArgumentException("1st number should in between 1 and 20");
+            }
+        }
+
+        public void checkForErrors2(String n5){
+
+        }
     }
 }

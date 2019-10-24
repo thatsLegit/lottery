@@ -1,5 +1,6 @@
+package gui;
+
 import javax.swing.SwingUtilities;
-import java.awt.*;
 
 public class App {
 
