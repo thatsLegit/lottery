@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18aa9f8d-8668-41ec-b489-f3335f13ff87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/Bet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/FormEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/FormListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/TablePanelModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lottery/ResultFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/App$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/FormPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/FormPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/MainFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/TablePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/TitlePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/seven-reasons-not-to-play-the-lottery-lwjmikju.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FormPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TablePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TitlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TitlePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/seven-reasons-not-to-play-the-lottery-lwjmikju.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/FormPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/FormPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/FormPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/FormPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/FormPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/FormPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FormPanel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +91,7 @@
       <workItem from="1571771359520" duration="8123000" />
       <workItem from="1571869433496" duration="6302000" />
       <workItem from="1571929583787" duration="15988000" />
+      <workItem from="1571993355165" duration="1984000" />
     </task>
     <servers />
   </component>

@@ -5,6 +5,7 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class FormPanel extends JPanel {
 
@@ -64,6 +65,7 @@ public class FormPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 boolean isTicked = superBet.isSelected();
                 n5.setEnabled(isTicked);
+                n5.setText("");
             }
         });
 
@@ -106,6 +108,11 @@ public class FormPanel extends JPanel {
                 }
 
                 String betAmountValue = betAmount.getText();
+                int amount = Integer.parseInt(betAmountValue);
+                if (amount < 1){
+                    JOptionPane.showMessageDialog(null, "A bet should strictly positive", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    throw new IllegalArgumentException("A bet should strictly positive");
+                }
 
                 //storing the input
                 FormEvent ev = new FormEvent(this, number1, number2, number3, number4, number5, isBet, betAmountValue);
@@ -220,20 +227,26 @@ public class FormPanel extends JPanel {
     }
 
     public void checkForErrors1(String n1, String n2, String n3, String n4) {
-        int no1 = Integer.parseInt(n1);
-        int no2 = Integer.parseInt(n2);
-        int no3 = Integer.parseInt(n3);
-        int no4 = Integer.parseInt(n4);
+        ArrayList<Integer> nb = new ArrayList<>();
+        nb.add(Integer.parseInt(n1));
+        nb.add(Integer.parseInt(n2));
+        nb.add(Integer.parseInt(n3));
+        nb.add(Integer.parseInt(n4));
 
-        for (int i = 1; i < 5; i++) {
-            if (no1 < 1 || no1 > 20) {
-                JOptionPane.showMessageDialog(null, "1st number should in between 1 and 20", "ERROR", JOptionPane.ERROR_MESSAGE);
-                throw new IllegalArgumentException("1st number should in between 1 and 20");
+        for (int i = 0; i < nb.size(); i++) {
+            if (nb.get(i) < 1 || nb.get(i) > 20) {
+                JOptionPane.showMessageDialog(null, "Number " + (i+1) + " should in between 1 and 20", "ERROR", JOptionPane.ERROR_MESSAGE);
+                throw new IllegalArgumentException("Number " + (i+1) + " should in between 1 and 20");
             }
         }
+    }
 
-        public void checkForErrors2(String n5){
+    public void checkForErrors2(String n5){
+        Integer number5 = Integer.parseInt(n5);
 
+        if (number5 < 1 || number5 > 10){
+            JOptionPane.showMessageDialog(null, "Number 5 should in between 1 and 10", "ERROR", JOptionPane.ERROR_MESSAGE);
+            throw new IllegalArgumentException("Number 5 should in between 1 and 10");
         }
     }
 }
