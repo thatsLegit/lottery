@@ -9,10 +9,10 @@ public class Bet {
     private Integer number3;
     private Integer number4;
     private Integer number5;
-    private Boolean isBet;
+    private Boolean isSuperBet;
     private Integer betAmountValue;
 
-    public Bet(Integer number1, Integer number2, Integer number3, Integer number4, Integer number5, Boolean isBet, Integer betAmountValue) {
+    public Bet(Integer number1, Integer number2, Integer number3, Integer number4, Integer number5, Boolean isSuperBet, Integer betAmountValue) {
         this.id = count;
         count++;
         this.number1 = number1;
@@ -20,7 +20,7 @@ public class Bet {
         this.number3 = number3;
         this.number4 = number4;
         this.number5 = number5;
-        this.isBet = isBet;
+        this.isSuperBet = isSuperBet;
         this.betAmountValue = betAmountValue;
     }
 
@@ -72,12 +72,12 @@ public class Bet {
         this.number5 = number5;
     }
 
-    public Boolean getBet() {
-        return isBet;
+    public Boolean getIsSuperBet() {
+        return isSuperBet;
     }
 
-    public void setBet(Boolean bet) {
-        isBet = bet;
+    public void setIsSuperBet(Boolean bet) {
+        isSuperBet = bet;
     }
 
     public Integer getBetAmountValue() {

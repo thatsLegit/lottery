@@ -2,7 +2,7 @@ package controller;
 
 import database.Bet;
 import database.Database;
-import gui.FormEvent;
+import gui.input.FormEvent;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class Controller {
         Integer number3 = e.getNumber3();
         Integer number4 = e.getNumber4();
         Integer number5 = e.getNumber5();
-        Boolean isBet = e.getBet();
+        Boolean isBet = e.getIsSuperBet();
         Integer betAmountValue = e.getBetAmountValue();
 
         Bet bet = new Bet(number1, number2, number3, number4, number5, isBet, betAmountValue);
