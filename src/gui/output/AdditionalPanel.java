@@ -7,7 +7,7 @@ import java.awt.*;
 public class AdditionalPanel extends JPanel {
 
     private JTable additionPanelTable;
-    private AdditionalPanelModel additionalPanelModel;
+    public static AdditionalPanelModel additionalPanelModel;
 
     AdditionalPanel(){
 

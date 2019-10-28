@@ -140,12 +140,19 @@ public class FormPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                SwingUtilities.invokeLater(new Runnable() {
+                if (MainFrame.controller.getBet().size() != 0){
 
-                    public void run() {
-                        new ResultFrame().setVisible(true);
-                    }
-                });
+                    SwingUtilities.invokeLater(new Runnable() {
+
+                        public void run() {
+                            new ResultFrame().setVisible(true);
+                        }
+                    });
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "You should add at least one bet", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    throw new IllegalArgumentException("You should add at least one bet");
+                }
             }
         });
 
@@ -263,6 +270,12 @@ public class FormPanel extends JPanel {
                 JOptionPane.showMessageDialog(null, "Number " + (i+1) + " should in between 1 and 20", "ERROR", JOptionPane.ERROR_MESSAGE);
                 throw new IllegalArgumentException("Number " + (i+1) + " should in between 1 and 20");
             }
+        }
+
+        //Throw an error if all numbers aren't different
+        if (nb.get(0)==nb.get(1) || nb.get(0)==nb.get(2) || nb.get(0)==nb.get(3) || nb.get(1)==nb.get(2) || nb.get(1)==nb.get(3) || nb.get(2)==nb.get(3)){
+            JOptionPane.showMessageDialog(null, "All numbers should have a different value to the exception of superbet number", "ERROR", JOptionPane.ERROR_MESSAGE);
+            throw new IllegalArgumentException("All numbers should have a different value to the exception of superbet number");
         }
     }
 

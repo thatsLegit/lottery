@@ -2,12 +2,13 @@ package gui.output;
 
 import game.Game;
 import gui.input.MainFrame;
+import gui.input.TablePanelModel;
 
 import javax.swing.table.AbstractTableModel;
 
 public class AdditionalPanelModel extends AbstractTableModel {
 
-    private String colNames [] = {"Bet value", "Fitting numbers", "Multiplicator"};
+    private String colNames [] = {"Bet value", "Fitting numbers", "Multiplier"};
 
     @Override
     public String getColumnName(int column) {
@@ -16,7 +17,7 @@ public class AdditionalPanelModel extends AbstractTableModel {
 
     @Override
     public int getRowCount() {
-        return RetrievalTableModel.db.size();
+        return TablePanelModel.db.size();
     }
 
     @Override
@@ -31,9 +32,9 @@ public class AdditionalPanelModel extends AbstractTableModel {
             case 0 :
                 return MainFrame.controller.getBet().get(row).getBetAmountValue();
             case 1:
-                return Game.calculateGainCoefficient(ResultFrame.game.getLotteryNumbers(), MainFrame.controller.getBet());
+                return Game.calculateFittingNumbers(ResultFrame.game.getLotteryNumbers().get(row), MainFrame.controller.getBet().get(row));
             case 2 :
-                return Game.calculateFittingNumbers(ResultFrame.game.getLotteryNumbers(), MainFrame.controller.getBet());
+                return Game.calculateGainCoefficient(ResultFrame.game.getLotteryNumbers().get(row), MainFrame.controller.getBet().get(row));
         }
         return null;
     }

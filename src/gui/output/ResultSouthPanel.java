@@ -4,17 +4,17 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 
-public class ResultPanel extends JPanel {
+public class ResultSouthPanel extends JPanel {
 
     private JTextArea results;
 
-    ResultPanel(){
+    ResultSouthPanel(){
 
         results = new JTextArea();
         results.setEditable(false);
 
         Dimension dim = getPreferredSize();
-        dim.height = 200;
+        dim.height = 100;
         setPreferredSize(dim);
 
         results.setBackground(new Color(80, 174, 205));

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TablePanelModel extends AbstractTableModel {
 
-    private List<Bet> db;
+    public static List<Bet> db;
     private String [] colNames = {"ID", "Nombre 1", "Nombre 2", "Nombre 3", "Nombre 4", "Nombre 5", "Super bet ", "Mise"};
 
     @Override

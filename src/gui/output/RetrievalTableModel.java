@@ -7,7 +7,7 @@ import java.util.List;
 
 public class RetrievalTableModel extends AbstractTableModel {
 
-    public static List<Bet> db;
+    private List<Bet> db;
     private String colNames [] = {"N1", "N2", "N3", "N4", "N5", "SB"};
 
     @Override

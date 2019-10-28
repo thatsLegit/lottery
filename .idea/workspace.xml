@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18aa9f8d-8668-41ec-b489-f3335f13ff87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/gui/output/AdditionalPanelModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lottery/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/input/FormPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/input/FormPanel$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/input/FormPanel$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/input/FormPanel$3$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/input/FormPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/input/FormPanel$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/input/FormPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/input/FormPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/input/TablePanelModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/input/TablePanelModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/output/AdditionalPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/output/AdditionalPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/output/LotteryTableModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/output/LotteryTableModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/output/AdditionalPanelModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/output/AdditionalPanelModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/output/ResultFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/output/ResultFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/output/ResultPanel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lottery/gui/output/RetrievalTableModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lottery/gui/output/RetrievalTableModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/input/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/input/FormPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/input/TablePanelModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/input/TablePanelModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/output/AdditionalPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/output/AdditionalPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/output/LotteryTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/output/LotteryTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/output/AdditionalPanelModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/output/AdditionalPanelModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/output/ResultFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/output/ResultFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/output/ResultPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/output/ResultSouthPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/output/RetrievalTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/output/RetrievalTableModel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,6 +110,8 @@
       <workItem from="1572176646663" duration="14597000" />
       <workItem from="1572205276556" duration="6444000" />
       <workItem from="1572261701295" duration="1948000" />
+      <workItem from="1572273463997" duration="12593000" />
+      <workItem from="1572287599043" duration="7000" />
     </task>
     <servers />
   </component>
