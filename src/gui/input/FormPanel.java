@@ -130,6 +130,7 @@ public class FormPanel extends JPanel {
                 n3.setText("");
                 n4.setText("");
                 n5.setText("");
+                n5.setEnabled(false);
                 superBet.setSelected(false);
                 betAmount.setText("");
             }

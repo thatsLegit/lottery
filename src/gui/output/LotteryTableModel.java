@@ -8,7 +8,7 @@ import java.util.List;
 public class LotteryTableModel extends AbstractTableModel {
 
     private List<WinningLottery> db;
-    private String colNames [] = {"ID", "N1", "N2", "N3", "N4", "N5"};
+    private String colNames [] = {"N1", "N2", "N3", "N4", "N5"};
 
     @Override
     public String getColumnName(int column) {
@@ -26,7 +26,7 @@ public class LotteryTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 6;
+        return 5;
     }
 
     @Override
@@ -35,16 +35,14 @@ public class LotteryTableModel extends AbstractTableModel {
 
         switch (column){
             case 0 :
-                return winningLottery.getiDLottery();
-            case 1 :
                 return winningLottery.getN1Lottery();
-            case 2:
+            case 1:
                 return winningLottery.getN2Lottery();
-            case 3:
+            case 2:
                 return winningLottery.getN3Lottery();
-            case 4:
+            case 3:
                 return winningLottery.getN4Lottery();
-            case 5 :
+            case 4 :
                 return winningLottery.getN5Lottery();
         }
         return null;

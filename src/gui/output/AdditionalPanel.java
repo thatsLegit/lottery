@@ -7,10 +7,12 @@ import java.awt.*;
 public class AdditionalPanel extends JPanel {
 
     private JTable additionPanelTable;
+    private AdditionalPanelModel additionalPanelModel;
 
     AdditionalPanel(){
 
-        additionPanelTable = new JTable();
+        additionalPanelModel = new AdditionalPanelModel();
+        additionPanelTable = new JTable(additionalPanelModel);
 
         Dimension dim = getPreferredSize();
         dim.width = 300;
@@ -23,8 +25,4 @@ public class AdditionalPanel extends JPanel {
         setLayout(new BorderLayout());
         add(new JScrollPane(additionPanelTable), BorderLayout.CENTER);
     }
-
-    /*public void setData(List<Bet> bet) {
-        additionalTableModel.setData(bet);
-    }*/
 }

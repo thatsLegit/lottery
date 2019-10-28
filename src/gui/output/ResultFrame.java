@@ -13,7 +13,7 @@ public class ResultFrame extends JFrame {
     private LotteryNumbersPanel lotteryNumbersPanel;
     private AdditionalPanel additionalPanel;
     private gui.output.ResultPanel resultPanel;
-    private Game game;
+    public static Game game;
 
     public ResultFrame() {
 
