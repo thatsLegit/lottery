@@ -30,11 +30,11 @@ public class AdditionalPanelModel extends AbstractTableModel {
 
         switch (column){
             case 0 :
-                return MainFrame.controller.getBet().get(row).getBetAmountValue();
+                return MainFrame.betDAO.getBet().get(row).getBetAmountValue();
             case 1:
-                return Game.calculateFittingNumbers(ResultFrame.game.getLotteryNumbers().get(row), MainFrame.controller.getBet().get(row));
+                return Game.calculateFittingNumbers(ResultFrame.game.getLotteryNumbers().get(row), MainFrame.betDAO.getBet().get(row));
             case 2 :
-                return Game.calculateGainCoefficient(ResultFrame.game.getLotteryNumbers().get(row), MainFrame.controller.getBet().get(row));
+                return Game.calculateGainCoefficient(ResultFrame.game.getLotteryNumbers().get(row), MainFrame.betDAO.getBet().get(row));
         }
         return null;
     }

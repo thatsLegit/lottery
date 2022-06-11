@@ -1,8 +1,9 @@
 package gui.output;
 
-import database.Bet;
-
 import javax.swing.table.AbstractTableModel;
+
+import Models.Bet;
+
 import java.util.List;
 
 public class RetrievalTableModel extends AbstractTableModel {

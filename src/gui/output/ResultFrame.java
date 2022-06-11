@@ -28,12 +28,12 @@ public class ResultFrame extends JFrame {
         game = new Game();
 
         //Data
-        retrievalPanel.setData(MainFrame.controller.getBet());  // set the data in retrievalPanel using the gui.input bets
+        retrievalPanel.setData(MainFrame.betDAO.getBet());  // set the data in retrievalPanel using the gui.input bets
         Game.CreateLottery();
         lotteryNumbersPanel.setLottery(game.getLotteryNumbers()); //set the data for the winning lottery numbers
 
         //texting in the SouthPanel
-        resultPanel.appendText("Total of bets : " + game.totalBets() + System.lineSeparator());
+        resultPanel.appendText("Total amount of bets : " + game.totalBets() + System.lineSeparator());
         resultPanel.appendText("Total gain : "  + game.totalGains() + System.lineSeparator());
         resultPanel.appendText("Result : "  + (game.totalGains() - game.totalBets()));
 

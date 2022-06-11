@@ -1,6 +1,5 @@
 package game;
 
-import database.Bet;
 import gui.input.MainFrame;
 import gui.input.TablePanelModel;
 import gui.output.AdditionalPanel;
@@ -9,9 +8,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+import Models.Bet;
+import Models.Lottery;
+
 public class Game {
 
-    private static List<WinningLottery> lotteryList = new LinkedList<>();
+    private static List<Lottery> lotteryList = new LinkedList<>();
 
     public static void CreateLottery(){
 
@@ -34,24 +36,24 @@ public class Game {
 
         for (int i = 0; i< TablePanelModel.db.size(); i++){
             if (TablePanelModel.db.get(i).getIsSuperBet()) {
-                WinningLottery winningLottery4numbers = new WinningLottery(number1, number2, number3, number4, number5);
-                lotteryList.add(winningLottery4numbers);
+                Lottery lottery4numbers = new Lottery(number1, number2, number3, number4, number5);
+                lotteryList.add(lottery4numbers);
             }
             else if (!TablePanelModel.db.get(i).getIsSuperBet()){
-                WinningLottery winningLottery5numbers = new WinningLottery(number1, number2, number3, number4, null);
-                lotteryList.add(winningLottery5numbers);
+                Lottery lottery5numbers = new Lottery(number1, number2, number3, number4, null);
+                lotteryList.add(lottery5numbers);
             }
         }
     }
 
-    public static Integer calculateFittingNumbers(WinningLottery winningLottery, Bet bet) {
+    public static Integer calculateFittingNumbers(Lottery lottery, Bet bet) {
         int fNumbers = 0;
-        LinkedList<Integer> winningLotteryList = new LinkedList<>();
-        winningLotteryList.add(winningLottery.getN1Lottery());
-        winningLotteryList.add(winningLottery.getN2Lottery());
-        winningLotteryList.add(winningLottery.getN3Lottery());
-        winningLotteryList.add(winningLottery.getN4Lottery());
-        winningLotteryList.add(winningLottery.getN5Lottery());
+        LinkedList<Integer> lotteryList = new LinkedList<>();
+        lotteryList.add(lottery.getN1Lottery());
+        lotteryList.add(lottery.getN2Lottery());
+        lotteryList.add(lottery.getN3Lottery());
+        lotteryList.add(lottery.getN4Lottery());
+        lotteryList.add(lottery.getN5Lottery());
         LinkedList<Integer> betList = new LinkedList<>();
         betList.add(bet.getNumber1());
         betList.add(bet.getNumber2());
@@ -61,7 +63,7 @@ public class Game {
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++){
-                if (betList.get(i) == winningLotteryList.get(j)) {
+                if (betList.get(i) == lotteryList.get(j)) {
                     fNumbers++;
                     break;
                 }
@@ -70,35 +72,35 @@ public class Game {
         return fNumbers;
     }
 
-    public static Integer calculateGainCoefficient(WinningLottery winningLottery, Bet bet) {
+    public static Integer calculateGainCoefficient(Lottery lottery, Bet bet) {
         int k;
 
         //Affects an initial coefficient independant from the superbet
-        if (calculateFittingNumbers(winningLottery, bet).equals(3)){
+        if (calculateFittingNumbers(lottery, bet).equals(3)){
             k = 5;
         }
-        else if (calculateFittingNumbers(winningLottery, bet).equals(4)){
+        else if (calculateFittingNumbers(lottery, bet).equals(4)){
             k = 50;
         }
         else k = 0;
 
         //Take superbet multiplier into account
         if (bet.getIsSuperBet()){
-            if (bet.getNumber5().equals(winningLottery.getN5Lottery())){
+            if (bet.getNumber5().equals(lottery.getN5Lottery())){
                 k = k*5;
             }
         }
         return k;
     }
 
-    public List<WinningLottery> getLotteryNumbers() {
+    public List<Lottery> getLotteryNumbers() {
         return lotteryList;
     }
 
     public Integer totalBets() {
         int amountValue = 0;
-        for (int i=0;i<MainFrame.controller.getBet().size();i++){
-            amountValue += MainFrame.controller.getBet().get(0).getBetAmountValue();
+        for (int i=0;i<MainFrame.betDAO.getBet().size();i++){
+            amountValue += MainFrame.betDAO.getBet().get(0).getBetAmountValue();
         }
         return amountValue;
     }
@@ -106,7 +108,7 @@ public class Game {
     public Integer totalGains() {
         //multiply each bet by the bet multiplier (depending on the fitting numbers) and return the final gain
         int gain = 0;
-        for (int i = 0; i<MainFrame.controller.getBet().size();i++){
+        for (int i = 0; i<MainFrame.betDAO.getBet().size();i++){
             gain += (int) AdditionalPanel.additionalPanelModel.getValueAt(i, 0)*(int) AdditionalPanel.additionalPanelModel.getValueAt(i, 2);
         }
         return gain;

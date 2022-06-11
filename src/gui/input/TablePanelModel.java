@@ -1,8 +1,9 @@
 package gui.input;
 
-import database.Bet;
-
 import javax.swing.table.AbstractTableModel;
+
+import Models.Bet;
+
 import java.util.List;
 
 public class TablePanelModel extends AbstractTableModel {

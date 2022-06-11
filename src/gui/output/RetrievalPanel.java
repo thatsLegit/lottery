@@ -1,9 +1,10 @@
 package gui.output;
 
-import database.Bet;
-
 import javax.swing.*;
 import javax.swing.border.Border;
+
+import Models.Bet;
+
 import java.awt.*;
 import java.util.List;
 

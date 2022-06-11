@@ -1,8 +1,9 @@
 package gui.input;
 
-import controller.Controller;
-
 import javax.swing.*;
+
+import DAO.BetDAO;
+
 import java.awt.*;
 
 public class MainFrame extends JFrame {
@@ -10,7 +11,7 @@ public class MainFrame extends JFrame {
     private gui.input.TitlePanel titlePanel;
     private gui.input.FormPanel formPanel;
     private gui.input.TablePanel tablePanel;
-    public static Controller controller;  //public static because needs to be accessed in the lottery package also
+    public static BetDAO betDAO;  //public static because needs to be accessed in the lottery package also
 
     public MainFrame(){
 
@@ -19,7 +20,7 @@ public class MainFrame extends JFrame {
         titlePanel = new gui.input.TitlePanel(); //creating components
         formPanel = new gui.input.FormPanel();
         tablePanel = new gui.input.TablePanel();
-        controller = new Controller();
+        betDAO = new BetDAO();
 
         getContentPane().setBackground(new Color(80,174,205));  // color of the mainframe, works only on the mainframe
         titlePanel.setBackground(new Color(80,174,205)); //setting the color in the mainframe for the components
@@ -31,7 +32,7 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //creation de la table en utilisant les données stockées dans la "bdd"
-        tablePanel.setData(controller.getBet());
+        tablePanel.setData(betDAO.getBet());
 
         //addButton implementation : the goal is to implement an interface that will allow to write the code of the actionListener in the gui.MainFrame (here)
         //1.creates an uninstantiated gui.FormListener type variable gui.FormPanel
@@ -43,7 +44,7 @@ public class MainFrame extends JFrame {
 
             @Override
             public void formEventOccured(gui.input.FormEvent e) {
-                controller.addBet(e);
+                betDAO.addBet(e);
                 tablePanel.refresh();
             }
         });

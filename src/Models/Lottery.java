@@ -1,6 +1,6 @@
-package game;
+package Models;
 
-public class WinningLottery {
+public class Lottery {
 
     private static int count = 0;
     private Integer iDLottery;
@@ -10,7 +10,7 @@ public class WinningLottery {
     private Integer n4Lottery;
     private Integer n5Lottery;
 
-    public WinningLottery(Integer n1Lottery, Integer n2Lottery, Integer n3Lottery, Integer n4Lottery, Integer n5Lottery) {
+    public Lottery(Integer n1Lottery, Integer n2Lottery, Integer n3Lottery, Integer n4Lottery, Integer n5Lottery) {
         this.iDLottery = count;
         count++;
         this.n1Lottery = n1Lottery;

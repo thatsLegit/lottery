@@ -1,9 +1,10 @@
 package gui.output;
 
-import game.WinningLottery;
-
 import javax.swing.*;
 import javax.swing.border.Border;
+
+import Models.Lottery;
+
 import java.awt.*;
 import java.util.List;
 
@@ -29,7 +30,7 @@ public class LotteryNumbersPanel extends JPanel {
         add(new JScrollPane(lotteryNumbersTable), BorderLayout.CENTER);
     }
 
-    public void setLottery(List<WinningLottery> winning) {
-        lotteryTableModel.setLottery(winning);
+    public void setLottery(List<Lottery> lottery) {
+        lotteryTableModel.setLottery(lottery);
     }
 }

@@ -140,7 +140,7 @@ public class FormPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                if (MainFrame.controller.getBet().size() != 0){
+                if (MainFrame.betDAO.getBet().size() != 0){
 
                     SwingUtilities.invokeLater(new Runnable() {
 
